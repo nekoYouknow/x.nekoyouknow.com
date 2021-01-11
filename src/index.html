@@ -15,11 +15,11 @@
 
         //2.서버응답을 기다려
         window.addEventListener("message", function(e) {
-            if (e.origin === "https://sso.nekoyouknow.com" ) {
+            //if (e.origin === "https://sso.nekoyouknow.com" ) {
               localStorage.setItem("token", e.data);
                 console.log("2.message received -setItem:", localStorage.getItem("token"));
                 //document.write("2.message received token=" + localStorage.getItem("token"));
-            }
+            //}
         });      
     </script>
 
