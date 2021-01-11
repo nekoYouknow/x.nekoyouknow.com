@@ -9,12 +9,14 @@
         //1.일단 비워
         localStorage.removeItem("token");
         console.log("1.remove token=", localStorage.getItem("token")); 
+        document.write(localStorage.getItem("token"));
 
         //2.서버응답을 기다려
         window.addEventListener("message", function(e) {
             if (e.origin === "https://sso.nekoyouknow.com" ) {
-            localStorage.setItem("token", e.data);
-            console.log("2.message received -setItem:", localStorage.getItem("token"));
+              localStorage.setItem("token", e.data);
+                console.log("2.message received -setItem:", localStorage.getItem("token"));
+                document.write(localStorage.getItem("token"));
             }
         });      
     </script>
